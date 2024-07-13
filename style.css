@@ -710,14 +710,14 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 38px;
     line-height: 50px;
     font-weight: 700;
     letter-spacing: -0.06em;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 34px;
     line-height: 40px;
     margin-left: -1px;
     font-weight: 700;
@@ -725,7 +725,7 @@ h3 {
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 35px;
     margin-left: -1px;
     font-weight: 700;
@@ -733,7 +733,7 @@ h4 {
 }
 
 h5 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 35px;
     margin-left: -1px;
     font-weight: normal;
@@ -741,14 +741,16 @@ h5 {
 }
 
 h6 {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 18px;
     margin: 0;
 }
 
 p {
+
     line-height: 28px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    font-size: 150%;
 }
 
 /*------------------------------------------------------------------
@@ -1142,6 +1144,8 @@ span.apl-background {
 
 .header-widgets {
     right: 0;
+    top: 8px;
+
 }
 
 .header-widget {
