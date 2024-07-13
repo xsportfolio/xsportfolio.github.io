@@ -9826,6 +9826,11 @@ body.dark .ac-title {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+        justify-content: center;
+    }
+
+    #homepage-scroll {
+        display: none;
     }
 
     .aph-image {
