@@ -9062,6 +9062,10 @@ body.dark .ac-title {
         font-size: 45px
     }
 
+    .a-post {
+        font-size: 70%;
+    }
+
     /* ------- ### Mouse Cursor ------- **/
 
     #mouseCursor {
