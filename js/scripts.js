@@ -1,3 +1,5 @@
+
+
 (function ($) {
     "use strict";
 
@@ -1951,34 +1953,35 @@
 
 
         catFilter.on('click', function () {
-
             let $this = $(this),
                 cat = $this.data('cat'),
-                projectsFind = '.cat_' + cat,
-                appPro = $(projectsFind);
-
-
-
+                projectsFind = '.cat_' + cat;
+        
             if (!$this.hasClass('active')) {
-
                 catFilter.removeClass('active')
                 $this.addClass('active')
-
+        
                 if (cat !== 'all') {
-
                     let filterAnim = gsap.timeline();
                     project.removeClass('is_inview');
-
+        
                     filterAnim.to('.aw-project-wrap', {
                         width: '0%',
                         delay: .4,
                         onComplete: function () {
-
                             project.hide();
-                            appPro.show();
-
+                            
+                            // Modified part to handle multiple categories
+                            project.each(function() {
+                                let $project = $(this),
+                                    categories = $project.data('category').split(' ');
+                                
+                                if(categories.includes(cat)) {
+                                    $project.show();
+                                }
+                            });
+        
                             $grid.masonry('destroy');
-
                             $grid.masonry({
                                 columnWidth: '.aw-works-sizer',
                                 gutter: ".aw-works-gutter",
@@ -1986,32 +1989,25 @@
                             });
                         }
                     });
-
+        
                     filterAnim.to('.aw-project-wrap', {
                         width: '100%',
                         delay: .2,
                         onComplete: function () {
-
                             $('.aw-project').addClass('is_inview')
                         }
                     })
-
-
+        
                 } else if (cat === 'all') {
-
-
                     let filterAnim = gsap.timeline();
                     project.removeClass('is_inview');
-
+        
                     filterAnim.to('.aw-project-wrap', {
                         width: '0%',
                         delay: .4,
                         onComplete: function () {
-
                             project.show();
-
                             $grid.masonry('destroy');
-
                             $grid.masonry({
                                 columnWidth: '.aw-works-sizer',
                                 gutter: ".aw-works-gutter",
@@ -2019,26 +2015,17 @@
                             });
                         }
                     });
-
+        
                     filterAnim.to('.aw-project-wrap', {
                         width: '100%',
                         delay: .2,
                         onComplete: function () {
-
                             $('.aw-project').addClass('is_inview')
                         }
                     })
-
-
                 }
-
             }
-
-
-
-
-
-        })
+        });
 
 
 
@@ -10511,3 +10498,5 @@
     };
 
 }(jQuery));
+
+ 
