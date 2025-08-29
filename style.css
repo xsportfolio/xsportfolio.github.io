@@ -750,7 +750,7 @@ p {
 
     line-height: 28px;
     margin-bottom: 15px;
-    font-size: 170%;
+    font-size: 140%;
 }
 
 /*------------------------------------------------------------------
@@ -9063,7 +9063,7 @@ body.dark .ac-title {
     }
 
     .a-post {
-        font-size: 62%;
+        font-size: 75%;
     }
 
     /* ------- ### Mouse Cursor ------- **/
