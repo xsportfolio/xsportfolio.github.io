@@ -10394,3 +10394,56 @@ html {
         object-fit: contain;
     }
 }
+
+/* Back to TOC Button */
+.back-to-toc {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    background: rgba(25, 27, 29, 0.08);
+    border: 1px solid rgba(25, 27, 29, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    backdrop-filter: blur(4px);
+}
+
+.back-to-toc.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-toc:hover {
+    background: rgba(25, 27, 29, 0.12);
+    transform: translateY(-2px);
+}
+
+.back-to-toc svg {
+    width: 18px;
+    height: 18px;
+    stroke: #191b1d;
+    stroke-width: 2;
+    fill: none;
+}
+
+@media only screen and (max-width: 576px) {
+    .back-to-toc {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .back-to-toc svg {
+        width: 16px;
+        height: 16px;
+    }
+}

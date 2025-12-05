@@ -1376,12 +1376,37 @@
     </div>
     <!-- /Site Footer -->
 
+    <!-- Back to TOC Button -->
+    <a href="#phat-kien" class="back-to-toc" aria-label="Back to Table of Contents">
+        <svg viewBox="0 0 24 24">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+    
     <script src="../js/jquery.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/barba.js"></script>
     <script src="../js/locomotive-scroll.min.js"></script>
     <script src="../js/gsap.js"></script>
     <script src="../js/scripts.js"></script>
+    <script>
+        // Back to TOC button visibility
+        (function () {
+            var btn = document.querySelector('.back-to-toc');
+            var toc = document.querySelector('.toc-container');
+
+            if (btn && toc) {
+                window.addEventListener('scroll', function () {
+                    var tocBottom = toc.getBoundingClientRect().bottom;
+                    if (tocBottom < 0) {
+                        btn.classList.add('visible');
+                    } else {
+                        btn.classList.remove('visible');
+                    }
+                });
+            }
+        })();
+    </script>
 
 </body>
 
