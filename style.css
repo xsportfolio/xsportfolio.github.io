@@ -10447,3 +10447,12 @@ html {
         height: 16px;
     }
 }
+
+.post-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+    object-fit: contain;
+}
