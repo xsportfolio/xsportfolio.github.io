@@ -1,0 +1,33 @@
+/*--------------------------------------------------
+## Social List
+---------------------------------------------------*/
+.social-list {
+    list-style: none;
+    padding: 0
+}
+
+.social-list li {
+    font-size: 18px;
+    line-height: 32px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.social-list li:last-child {
+    margin-bottom: 0;
+}
+
+.social-list li a {
+    text-decoration: none;
+    color: rgba(25, 27, 29, .6);
+    display: block;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    opacity: 0;
+}
+
+.site-header.menu_dark .social-list li a {
+    color: hsla(0, 0%, 100%, .4)
+}
+

@@ -1,0 +1,47 @@
+/*--------------------------------------------------
+## Clients
+---------------------------------------------------*/
+.a-clients {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.a-client {
+    display: block;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.a-client a {
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.a-clients.column-5 .a-client {
+    width: 20%;
+}
+
+.a-clients.column-4 .a-client {
+    width: 25%;
+}
+
+.a-clients.column-3 .a-client {
+    width: 33.3333333%;
+}
+
+.a-clients.column-2 .a-client {
+    width: 50%;
+}
+
+.a-clients.column-1 .a-client {
+    width: 100%;
+}
+
+.a-client img {
+    width: 100%;
+}
+

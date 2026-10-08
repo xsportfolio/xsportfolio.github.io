@@ -1,0 +1,189 @@
+/*------------------------------------------------------------------
+## List
+-------------------------------------------------------------------**/
+
+.portfolio-showcase.showcase-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.showcase-list-wrapper {
+    position: relative;
+    left: 25%;
+    width: 100%;
+    height: 100%;
+    margin-top: 250px
+}
+
+.portfolio-showcase.showcase-list .plyr {
+    min-height: 500px
+}
+
+.sl-project {
+    display: block;
+    padding: 40px 0;
+    cursor: pointer;
+    z-index: auto;
+    -webkit-transition: opacity .3s ease, -webkit-transform .3s ease;
+    transition: opacity .3s ease, -webkit-transform .3s ease;
+    -o-transition: transform .3s ease, opacity .3s ease;
+    transition: transform .3s ease, opacity .3s ease;
+    transition: transform .3s ease, opacity .3s ease, -webkit-transform .3s ease;
+    position: relative;
+}
+
+.sl-project a {
+    text-decoration: none;
+    color: #191b1d;
+    display: block;
+    overflow: hidden
+}
+
+.showcase-list.dark .sl-project a,
+body.dark .sl-project a {
+    color: #fff
+}
+
+.sl-project.opdown {
+    opacity: .1
+}
+
+.sl-project:hover {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px)
+}
+
+.sl-images {
+    position: fixed;
+    z-index: -1
+}
+
+.sl-images .sl-project-image {
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    visibility: hidden
+}
+
+.sl-images .sl-project-image .sl-hover-wrap {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(.7);
+    -ms-transform: scale(.7);
+    transform: scale(.7);
+    overflow: hidden;
+    -webkit-transition: -webkit-transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+    transition: -webkit-transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+    -o-transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+    transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+    transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1), -webkit-transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.sl-images .sl-project-image img {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    -webkit-transition: -webkit-transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+    transition: -webkit-transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+    -o-transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+    transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+    transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1), -webkit-transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+
+.sl-images .sl-project-image.active .sl-hover-wrap {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.sl-images .sl-project-image.active img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.sl-project-title {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    position: relative;
+    z-index: -1;
+}
+
+
+.sl-project::before {
+    content: attr(data-index);
+    position: absolute;
+    left: 0;
+    top: 20px;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 500;
+    -webkit-transform: translateX(-150%);
+    -ms-transform: translateX(-150%);
+    transform: translateX(-150%);
+    color: rgba(25, 27, 29, .6);
+    opacity: 0
+}
+
+.sl-project-meta div {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: rgba(25, 27, 29, .6);
+}
+
+.showcase-list.dark .sl-project::before,
+body.dark .sl-project::before,
+.showcase-list.dark .sl-project-meta div,
+body.dark .sl-project-meta div {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+.sl-project-cat::after {
+    content: "/";
+    display: inline-block;
+    margin-left: 7px;
+    opacity: .5;
+}
+
+.sl-project-meta {
+    display: block;
+    margin-top: 10px;
+    margin-left: 5px;
+    position: relative;
+    z-index: -1
+}
+
+.sl-project:hover .sl-project-title,
+.sl-project:hover .sl-project-meta {
+    z-index: 5
+}
+
+.sl-scroll {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+
+.portfolio-showcase.showcase-list .showcase-footer {
+    position: fixed
+}
+

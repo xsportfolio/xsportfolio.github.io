@@ -1,0 +1,183 @@
+/*------------------------------------------------------------------
+## Works Page
+-------------------------------------------------------------------**/
+
+.a-works {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.aw-project {
+    display: block;
+    margin-bottom: 200px;
+    overflow: hidden;
+    height: 500px
+}
+
+.aw-project-image,
+.aw-project img {
+    height: 100%
+}
+
+.aw-project a {
+    text-decoration: none;
+    color: #191b1d
+}
+
+
+
+.aw-project-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 100%
+}
+
+.aw-project .aw-project-wrap::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ebebeb;
+    z-index: 1;
+    -webkit-transition: width .8s cubic-bezier(0.54, 0.54, 0.14, 0.99);
+    -o-transition: width .8s cubic-bezier(0.54, 0.54, 0.14, 0.99);
+    transition: width .8s cubic-bezier(0.54, 0.54, 0.14, 0.99)
+}
+
+body.dark .aw-project .aw-project-wrap::before {
+    background: #101010
+}
+
+.aw-project.is_inview .aw-project-wrap::before {
+    width: 0;
+}
+
+.a-works.column_2 .aw-works-sizer,
+.a-works.column_2 .aw-project {
+    width: 45%
+}
+
+.a-works.column_3 .aw-works-sizer,
+.a-works.column_3 .aw-project {
+    width: 30%
+}
+
+.a-works.column_3 .aw-project {
+    margin-bottom: 100px
+}
+
+.a-works.column_3 .aw-works-gutter {
+    width: 3%
+}
+
+.a-works.column_3 .aw-works-stamp {
+    display: none
+}
+
+.aw-works-gutter {
+    width: 10%
+}
+
+.a-works.no-gutter .aw-works-gutter {
+    width: 0
+}
+
+.a-works.no-gutter .aw-project {
+    margin-bottom: 0
+}
+
+.aw-works-stamp {
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 100px;
+}
+
+
+.aw-project img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.aw-project-meta {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+
+.aw-project-title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    margin-bottom: 5px;
+}
+
+.aw-project-cat {
+    font-size: 20px;
+    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: rgba(25, 27, 29, .6);
+}
+
+body.dark .aw-project-cat {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+body.dark .aw-project-title {
+    color: #fff
+}
+
+.aw-categories {
+    display: block;
+
+    margin-bottom: 50px;
+}
+
+ul.aw-cats {
+    padding: 0;
+    list-style: none;
+}
+
+
+ul.aw-cats li {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(25, 27, 29, .6);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    cursor: pointer
+}
+
+ul.aw-cats li.active {
+    color: #191b1d
+}
+
+ul.aw-cats li.active::after {
+    color: #dbdbdb
+}
+
+ul.aw-cats li::after {
+    content: "/";
+    margin: 0 10px;
+}
+
+ul.aw-cats li:last-child::after {
+    display: none;
+}
+
+body.dark ul.aw-cats li {
+    color: hsla(0, 0%, 100%, .2)
+}
+
+body.dark ul.aw-cats li.active {
+    color: #fff
+}
+

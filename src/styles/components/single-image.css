@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------
+## Single Image
+-------------------------------------------------------------------**/
+
+.single-image {
+    width: 100%;
+    display: block;
+    position: relative;
+    float: left
+}
+
+.single-image.lightbox {
+    cursor: pointer
+}
+
+.single-image img {
+    width: 100%;
+}
+
+.single-image.parallax_wrapper {
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    overflow: visible;
+}
+

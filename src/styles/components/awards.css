@@ -1,0 +1,100 @@
+/*--------------------------------------------------
+## Awards
+---------------------------------------------------*/
+
+.a-awards {
+    display: block;
+    position: relative;
+    overflow: visible;
+    float: left
+}
+
+.a-award {
+    display: block;
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.a-award a {
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+}
+
+.award-dets {
+    display: block;
+    float: left;
+}
+
+.award-date {
+    display: block;
+    float: right;
+    margin-top: 0.4em;
+}
+
+.award-title,
+.award-date {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    display: block;
+    overflow: visible
+}
+
+.award-title span,
+.award-date span,
+.award-loc span {
+    display: block;
+}
+
+.award-loc {
+    color: hsla(0, 0%, 100%, .4);
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    display: block;
+    overflow: visible
+}
+
+.a-award::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: hsla(0, 0%, 100%, .2);
+    height: 1px;
+    -webkit-transition: width .7s ease .4s;
+    -o-transition: width .7s ease .4s;
+    transition: width .7s ease .4s;
+}
+
+.a-award.is_inview::after {
+    width: 100%;
+}
+
+.award-date {
+    color: hsla(0, 0%, 100%, .4);
+}
+
+.a-awards.light .award-title,
+.a-awards.light .award-date {
+    color: #191b1d;
+}
+
+.a-awards.light .award-loc {
+    color: rgb(25 27 29 / 69%);
+}
+
+.a-awards.light .a-award::after {
+    background: rgba(25, 27, 29, .2);
+}
+
+

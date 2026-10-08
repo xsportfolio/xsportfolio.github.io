@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------
+### Scroll Notice
+-------------------------------------------------------------------**/
+.scroll-notice {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+}
+
+.scroll-notice span:last-child {
+    display: block;
+    position: relative;
+    width: auto;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(25, 27, 29, .6);
+    writing-mode: vertical-lr
+}
+
+body.dark .scroll-notice span {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+span.sn_bef {
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    background: rgba(25, 27, 29, .6);
+    bottom: 140%;
+    left: 5px;
+}
+
+body.dark .scroll-notice span.sn_bef {
+    background: hsla(0, 0%, 100%, .4)
+}
+

@@ -1,0 +1,98 @@
+/*--------------------------------------------------
+## Buttons
+---------------------------------------------------*/
+
+.a-button.light a,
+.a-button.light i,
+.a-button i,
+.a-button a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease;
+    padding: 20px 10px 20px 40px;
+    display: block;
+    float: left;
+}
+
+.a-button i {
+    padding-left: 0;
+    padding-right: 35px
+}
+
+.a-button.style_1.light,
+.a-button.style_1 {
+    display: inline-block;
+    background-color: #191b1d;
+    margin: 25px 0;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden
+}
+
+.a-button.style_1.dark,
+body.dark .a-button.style_1 {
+    background-color: hsla(0, 0%, 100%, .2)
+}
+
+.a-button.style_1.light {
+    background-color: #191b1d !important
+}
+
+.a-button.light::before,
+.a-button.style_1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b7babe;
+    border-radius: 0px;
+    height: 100%;
+    width: 0%;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.a-button.style_1:hover::before {
+    width: 100%;
+    border-radius: 25px;
+
+}
+
+.a-button.light:hover i,
+.a-button.light:hover a,
+.a-button.style_1:hover i,
+.a-button.style_1:hover a {
+    color: #191b1d
+}
+
+
+a.inner-button {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, .4);
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease;
+}
+
+a.inner-button:hover {
+    color: #fff;
+}
+
+a.inner-button.dark {
+    color: rgba(25, 27, 29, .6)
+}
+
+a.inner-button.dark:hover {
+    color: #191b1d;
+}
+
+

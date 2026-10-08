@@ -1,0 +1,125 @@
+/*------------------------------------------------------------------
+## Services - Style 2
+-------------------------------------------------------------------**/
+
+.a-services.style_2 {
+    overflow: hidden;
+    margin-top: 0
+}
+
+.a-services.style_2 .services {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.a-services.style_2 .service-title {
+    font-size: 80px;
+    line-height: 100px;
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+
+.a-services.style_2 .service-title .ser_tit_line {
+    overflow: hidden;
+    padding-right: 10px
+}
+
+.a-services.style_2 .service-wrap {
+    overflow: hidden;
+    margin-left: 10px;
+    display: block;
+    float: left;
+    position: relative;
+}
+
+.a-services.style_2 .service-wrap::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: #191b1d;
+}
+
+.a-services.style_2 .service {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+
+.a-services.style_2 .service::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(25, 27, 29, .2);
+    position: absolute;
+    bottom: 0
+}
+
+
+.a-services.style_2 .service-toggle {
+    display: block;
+    float: right;
+    padding: 60px 0
+}
+
+.a-services.style_2 .service-toggle i {
+    float: right;
+    font-size: 50px;
+    vertical-align: middle;
+    display: block;
+}
+
+.a-services.style_2 .service-cont {
+    display: block;
+    float: right;
+    width: 65%;
+    padding-right: 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.a-services.style_2.dark .service-toggle,
+body.dark .a-services .service-toggle,
+body.dark .a-services .service-title,
+.a-services.style_2.dark .service-title {
+    color: #fff;
+}
+
+body.dark .a-services .service::after,
+.a-services.style_2.dark .service::after {
+    background: hsla(0, 0%, 100%, .2);
+}
+
+body.dark .a-services .service-wrap::before,
+.a-services.style_2.dark .service-wrap::before {
+    background: #fff;
+}
+
+.a-services.style_2.light .service-toggle,
+.a-services.style_2.light .service-title {
+    color: #191b1d !important;
+}
+
+.a-services.style_2.light .service::after {
+    background: rgba(25, 27, 29, .6) !important
+}
+
+
+.a-services.style_2.light .service-wrap::before {
+    background: #191b1d !important;
+}
+

@@ -1,0 +1,58 @@
+/*------------------------------------------------------------------
+## Scroll Animationss
+-------------------------------------------------------------------**/
+
+.line-holder {
+    overflow: hidden;
+    display: block
+}
+
+.word-holder,
+.char-holder {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.has-anim {
+    display: block;
+    width: 100%
+}
+
+.img-anim-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-anim-ov {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+
+.img-anim-wrapper img {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+.single-image span {
+    display: block;
+    position: absolute;
+}
+
+.anim_line {
+    display: block;
+    overflow: hidden
+}
+
+

@@ -1,0 +1,79 @@
+/*--------------------------------------------------
+## Page Navigation
+---------------------------------------------------*/
+
+.a-page-nav {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.a-page-nav a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+    color: #191b1d
+}
+
+.a-page-nav .page-title {
+    font-size: 150px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    color: rgba(25, 27, 29, .6);
+    display: block;
+    margin-right: 50px;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease
+}
+
+.a-page-nav.dark .page-title,
+body.dark .page-title {
+    color: hsla(0, 0%, 100%, .1)
+}
+
+.a-page-nav a:hover .page-title {
+    color: #191b1d
+}
+
+.a-page-nav.dark .page-sub-title,
+body.dark .page-sub-title,
+.a-page-nav.dark a:hover .page-title,
+body.dark a:hover .page-title {
+    color: #fff
+}
+
+
+.page-sub-title {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #191b1d
+}
+
+
+
+.page-sub-title::after {
+    content: "\ea5d";
+    font-family: IcoFont;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateY(-65%) translateX(65%) rotate(-45deg);
+    -ms-transform: translateY(-65%) translateX(65%) rotate(-45deg);
+    transform: translateY(-65%) translateX(65%) rotate(-45deg);
+    right: 0;
+}
+
+
+.a-page-nav.dark .page-sub-title::after,
+body.dark .page-sub-title::after {
+    color: #fff
+}
+

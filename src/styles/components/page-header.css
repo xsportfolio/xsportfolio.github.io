@@ -1,0 +1,85 @@
+/*------------------------------------------------------------------
+## Page Header
+-------------------------------------------------------------------**/
+
+.page-header {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-top: 115px;
+    background: #EBEBEB;
+    margin-bottom: 150px;
+    z-index: 2
+}
+
+.page-header-wrap.wrapper-small {
+    margin-bottom: 0;
+    position: relative;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+
+.page-title {
+    display: block;
+    float: left;
+    padding: 0 15px 15px 0px;
+}
+
+.page-subtitle {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+.page-title h1.big-title {
+    margin-bottom: 20px;
+    margin-top: 0;
+    line-height: 130px;
+    font-size: 110px
+}
+
+.page-title .pt-char {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%)
+}
+
+.page-title .pt-word {
+    overflow: hidden;
+    padding-right: 5px
+}
+
+.page-breadcrumbs {
+    display: block;
+    float: right;
+}
+
+ul.bradcrumbs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.bradcrumbs li {
+    padding: 0;
+    display: inline-block;
+}
+
+ul.bradcrumbs li a {
+    text-decoration: none;
+    color: #191b1d;
+}
+
+ul.bradcrumbs li::after {
+    content: "\ea5d";
+    font-family: 'IcoFont';
+    margin-left: 10px;
+    margin-right: 6px;
+}
+
+ul.bradcrumbs li:last-child::after {
+    display: none;
+}
+

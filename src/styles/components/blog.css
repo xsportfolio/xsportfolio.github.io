@@ -1,0 +1,15 @@
+/*------------------------------------------------------------------
+## Blog
+-------------------------------------------------------------------**/
+
+.post.a-post {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.post.a-post a {
+    text-decoration: none;
+    color: #191b1d;
+}
+

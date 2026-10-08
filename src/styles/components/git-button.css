@@ -1,0 +1,27 @@
+/*--------------------------------------------------
+## GIT Button
+---------------------------------------------------*/
+
+.git-button a {
+    text-decoration: none;
+    color: #ebebeb;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+.git-button {
+    -webkit-transform: rotate(90deg) translateY(50%) translateX(50%);
+    -ms-transform: rotate(90deg) translateY(50%) translateX(50%);
+    transform: rotate(90deg) translateY(50%) translateX(50%);
+    display: block;
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    opacity: 0;
+}
+
+.site-header.menu_dark .git-button a {
+    color: hsla(0, 0%, 100%, .2);
+}
+

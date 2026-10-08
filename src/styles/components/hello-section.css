@@ -1,0 +1,46 @@
+/*--------------------------------------------------
+## Hello Section
+---------------------------------------------------*/
+
+.a-hello-section {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hello-heading {
+    padding-left: 5%;
+}
+
+.a-hello-section .circular-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #191b1d;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    transform: translateY(200%);
+    left: unset
+}
+
+.hello-back-text {
+    font-size: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    z-index: -1;
+    color: rgba(25, 27, 29, .05);
+    white-space: nowrap
+}
+

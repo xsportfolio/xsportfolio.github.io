@@ -1,0 +1,223 @@
+/*------------------------------------------------------------------
+## Shop
+-------------------------------------------------------------------**/
+
+.a-products {
+    display: block;
+
+}
+
+.a-products-wrapper {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.products-met {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.products-met div {
+    display: block;
+    color: rgba(25, 27, 29, .6)
+}
+
+body.dark .products-met div {
+    color: hsla(0, 0%, 100%, .2)
+}
+
+.products-count {
+    float: left;
+}
+
+.products-sorting {
+    float: left;
+}
+
+.a-products .product {
+    position: relative;
+    margin-bottom: 40px
+}
+
+.a-products.column_1 .product,
+.a-products.column_1 .grid-sizer {
+    width: 100%
+}
+
+.a-products.column_2 .product,
+.a-products.column_2 .grid-sizer {
+    width: 47.5%
+}
+
+.a-products.column_3 .product,
+.a-products.column_3 .grid-sizer {
+    width: 30%
+}
+
+.a-products.column_1 .gutter {
+    width: 0
+}
+
+.gutter {
+    width: 40px
+}
+
+.a-products .product a {
+    text-decoration: none;
+    color: #191b1d
+}
+
+.a-products .product .product-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.a-products .product .product-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+    -webkit-transform: scale(1.1) translateX(30px);
+    -ms-transform: scale(1.1) translateX(30px);
+    transform: scale(1.1) translateX(30px)
+}
+
+.a-products .product.is_inview .product-image img {
+    -webkit-transform: scale(1) translateX(0);
+    -ms-transform: scale(1) translateX(0);
+    transform: scale(1) translateX(0)
+}
+
+.a-products .product:hover .product-image img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.product-details {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    z-index: 1
+}
+
+.product-title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin-bottom: 11px;
+}
+
+body.dark .product-acts a:hover,
+body.dark .product-title {
+    color: #fff !important
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.05em;
+    color: rgba(25, 27, 29, .6);
+}
+
+
+body.dark .product-price {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+.widget-title {
+    display: block;
+    font-size: 20px;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.product-categories {
+    display: block;
+    width: 100%;
+}
+
+ul.product-cats {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+ul.product-cats li a {
+    text-decoration: none;
+    color: #191b1d
+}
+
+body.dark ul.product-cats li a {
+    color: hsla(0, 0%, 100%, .2)
+}
+
+.product-acts {
+    display: block;
+    position: absolute;
+    bottom: 7%;
+    left: 7%;
+    overflow: hidden
+}
+
+.product-acts a {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    color: rgba(25, 27, 29, .6) !important;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: color .1s ease, -webkit-transform .4s cubic-bezier(0.42, 0.39, 0.06, 0.99);
+    transition: color .1s ease, -webkit-transform .4s cubic-bezier(0.42, 0.39, 0.06, 0.99);
+    -o-transition: transform .4s cubic-bezier(0.42, 0.39, 0.06, 0.99), color .1s ease;
+    transition: transform .4s cubic-bezier(0.42, 0.39, 0.06, 0.99), color .1s ease;
+    transition: transform .4s cubic-bezier(0.42, 0.39, 0.06, 0.99), color .1s ease, -webkit-transform .4s cubic-bezier(0.42, 0.39, 0.06, 0.99);
+}
+
+body.dark .product-acts a {
+    color: hsla(0, 0%, 100%, .2) !important
+}
+
+.product-acts a:hover {
+    color: #191b1d !important
+}
+
+.a-products .product:hover .product-acts a {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.a-products .product::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ebebeb;
+    z-index: 2;
+    -webkit-transition: width 1s cubic-bezier(0.54, 0.54, 0.14, 0.99);
+    -o-transition: width 1s cubic-bezier(0.54, 0.54, 0.14, 0.99);
+    transition: width 1s cubic-bezier(0.54, 0.54, 0.14, 0.99);
+}
+
+body.dark .a-products .product::before {
+    background: #101010;
+}
+
+.a-products .product.is_inview::before {
+    width: 0%;
+}
+

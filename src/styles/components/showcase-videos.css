@@ -1,0 +1,69 @@
+/*------------------------------------------------------------------
+## Showcase Videos
+-------------------------------------------------------------------**/
+
+.portfolio-showcase.showcase-video {
+    position: relative
+}
+
+.portfolio-showcase .plyr__controls {
+    display: none
+}
+
+.plyr--full-ui input[type="range"] {
+    color: #000
+}
+
+.portfolio-showcase .plyr--video .plyr__control.plyr__tab-focus,
+.portfolio-showcase .plyr--video .plyr__control:hover,
+.portfolio-showcase .plyr--video .plyr__control[aria-expanded="true"] {
+    background: #000
+}
+
+.portfolio-showcase .plyr__control--overlaid {
+    background: #000;
+}
+
+.portfolio-showcase .plyr__video-embed iframe {
+    top: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-showcase .plyr--full-ui.plyr--video .plyr__control--overlaid {
+    display: none;
+}
+
+
+.portfolio-showcase .plyr {
+    width: 100%;
+    height: 100%;
+    pointer-events: none
+}
+
+.portfolio-showcase .plyr__video-wrapper {
+    width: calc((75vh - 2rem) * 1.77777778);
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.showcase-video {
+    width: 100%;
+    height: 100%;
+}
+
+.showcase-video video {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top
+}
+
+

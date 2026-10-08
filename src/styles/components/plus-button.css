@@ -1,0 +1,103 @@
+/*------------------------------------------------------------------
+### Plus Button
+-------------------------------------------------------------------**/
+
+.a-plus-button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.a-plus-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #191b1d;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.a-plus-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: #191b1d;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: -webkit-transform .6s ease;
+    transition: -webkit-transform .6s ease;
+    -o-transition: transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease, -webkit-transform .6s ease
+}
+
+body.dark .a-plus-button::before,
+body.dark .a-plus-button::after,
+.a-plus-button.light::after,
+.a-plus-button.light::before {
+    background: #fff
+}
+
+.a-plus-button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    color: #191b1d;
+    font-size: 12px;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+body.dark .a-plus-button a,
+.a-plus-button.light a {
+    color: #fff
+}
+
+.a-plus-button a > span {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    overflow: hidden;
+}
+
+.a-plus-button a > span > span {
+    display: block;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform .3s ease .3s;
+    transition: -webkit-transform .3s ease .3s;
+    -o-transition: transform .3s ease .3s;
+    transition: transform .3s ease .3s;
+    transition: transform .3s ease .3s, -webkit-transform .3s ease .3s;
+}
+
+.a-plus-button:hover a > span > span {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.a-plus-button:hover::after {
+    -webkit-transform: translateX(-50%) rotate(270deg);
+    -ms-transform: translateX(-50%) rotate(270deg);
+    transform: translateX(-50%) rotate(270deg);
+}
+

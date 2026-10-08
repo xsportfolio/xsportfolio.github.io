@@ -1,0 +1,62 @@
+/*--------------------------------------------------
+## Single Work
+---------------------------------------------------*/
+.a-single-project {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.a-single-project a {
+    text-decoration: none;
+    color: #191b1d;
+}
+
+body.dark .a-single-project a,
+.a-single-project.dark a {
+    color: #fff
+}
+
+.sw-image {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.sw-image img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transform: scale(1.1) translateY(-4%);
+    -ms-transform: scale(1.1) translateY(-4%);
+    transform: scale(1.1) translateY(-4%);
+}
+
+.sw-detail {
+    position: relative;
+    padding-top: 30px;
+    padding-left: 30px;
+    display: block;
+}
+
+.sw-title {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sw-cat {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: rgb(25 27 29 / 50%);
+}
+
+body.dark .a-single-project .sw-cat,
+.a-single-project.dark .sw-cat {
+    color: hsla(0, 0%, 100%, .4)
+}
+

@@ -1,0 +1,114 @@
+/*------------------------------------------------------------------
+### Blog - List
+-------------------------------------------------------------------**/
+.blog-classic .post.a-post {
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+    margin-bottom: 100px;
+
+}
+
+.blog-classic .post-image {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-classic .post-image img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+}
+
+.a-blog.blog-classic {
+    display: block;
+    overflow: hidden;
+}
+
+.blog-classic .post.a-post.sticky {
+    width: 95.5%;
+    margin: 0 auto;
+    float: none;
+    clear: both;
+    margin-bottom: 100px;
+}
+
+.blog-classic .post.a-post.sticky .post-image {
+    width: 60%;
+    display: block;
+    float: left
+}
+
+.blog-classic .post.a-post.sticky .post-meta {
+    width: 40%
+}
+
+.blog-classic .post.a-post .post-title {
+    margin-top: 30px;
+    margin-bottom: 10px
+}
+
+.blog-classic .post-date {
+    display: block;
+    float: left
+}
+
+.blog-classic h5.post-date::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: rgba(25, 27, 29, .6);
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.blog-classic .post-meta {
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 25px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.blog-classic .post.sticky .post-meta {
+    padding-top: 50px
+}
+
+.a-blog.blog-classic .post.a-post .post-title h2 {
+    margin-bottom: 0;
+}
+
+.blog-classic .post-date,
+.blog-classic .post-cat {
+    color: rgba(25, 27, 29, .6);
+}
+
+
+body.dark .blog-classic .post-date,
+.blog-classic.dark .post-date,
+body.dark .blog-classic .post-cat,
+.blog-classic.dark .post-cat {
+    color: hsla(0, 0%, 100%, .4);
+}
+
+body.dark h5.post-date::after,
+.blog-classic.dark h5.post-date::after {
+    background: hsla(0, 0%, 100%, .4);
+}
+
+body.dark .page-header {
+    background: #131517
+}
+
+body.dark .page-title h1 {
+    color: #fff;
+}
+
+

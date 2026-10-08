@@ -1,0 +1,141 @@
+/*------------------------------------------------------------------
+## Products Carousel
+-------------------------------------------------------------------**/
+
+.a-products-carousel {
+    display: block;
+}
+
+.apc-cats {
+    display: block;
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-left: 7.5%;
+    margin-bottom: 30px
+}
+
+
+.apc-cats ul {
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    overflow: hidden
+}
+
+.apc-cats ul li {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    opacity: .3;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0
+}
+
+.apc-cats ul.locked {
+    pointer-events: none;
+}
+
+.apc-cats ul li.active {
+    opacity: 1;
+}
+
+.apc-cats ul li::after {
+    content: "/";
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.apc-cats ul li.active::after {
+    opacity: .35;
+}
+
+.apc-cats ul li:last-child::after {
+    display: none;
+}
+
+.apc-product-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: auto;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 600px;
+}
+
+.apc-product {
+    display: block;
+    height: 100%;
+    margin-right: 30px;
+    position: relative;
+    width: 31.3vw;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+
+.apc-product:hover img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.apc-product.hide {
+    display: none
+}
+
+.apc-product-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.apc-product-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: -webkit-transform .6s ease;
+    transition: -webkit-transform .6s ease;
+    -o-transition: transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease, -webkit-transform .6s ease;
+}
+
+.apc-product-det {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+h3.apc-product-title {
+    margin-bottom: 5px;
+}
+
+h4.apc-product-price {
+    color: rgba(25, 27, 29, .6) !important
+}
+
+body.dark h4.apc-product-price {
+    color: hsla(0, 0%, 100%, .2) !important
+}
+
+
+span.product-ov {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 00%;
+    height: 100%;
+    background: #ebebeb;
+}
+
+body.dark span.product-ov {
+    background: #101010
+}
+

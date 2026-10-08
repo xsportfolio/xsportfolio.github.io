@@ -1,0 +1,21 @@
+{
+  "name": "nxson-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "check": "node tools/build.mjs --check",
+    "dev": "node tools/serve.mjs --watch",
+    "preview": "node tools/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "baseline:update": "node tools/baseline.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "esbuild": "0.28.2",
+    "nunjucks": "3.2.4"
+  }
+}

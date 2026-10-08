@@ -1,0 +1,118 @@
+/*------------------------------------------------------------------
+## Fullscreen Carousel
+-------------------------------------------------------------------**/
+
+
+.portfolio-showcase.fullscreen-carousel-showcase {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.swiper-slide.cs-project {
+    height: 100vh;
+    display: block;
+    position: relative;
+    border-right: 1px solid #e4e4e4;
+    cursor: pointer
+}
+
+.cs-project .cs-project-image {
+    display: none
+}
+
+.cs-images {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1
+}
+
+.cs-images .cs-project-image img,
+.cs-images .cs-project-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cs-project-dets {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.cs-project-title {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    max-width: 75%;
+    line-height: 55px;
+    margin-bottom: 10px;
+}
+
+.cs-project-cat {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #616161;
+}
+
+.cs-project-excerpt {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    max-width: 70%;
+    font-size: 14px;
+    line-height: 28px;
+    margin: 0;
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease
+}
+
+.cs-project.hovered .cs-project-excerpt {
+    max-height: 100px;
+    margin: 20px 0;
+}
+
+.cs-rpoject-button {
+    display: none;
+}
+
+.swiper-slide.cs-project::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(255 255 255 / 50%);
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.swiper-slide.cs-project.hovered::after {
+    opacity: 1;
+
+}
+
+
+

@@ -1,0 +1,276 @@
+/*------------------------------------------------------------------
+## Fullscreen Slideshow
+-------------------------------------------------------------------**/
+.fullscreen-slider-showcase {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+
+    .fullscreen-slider-showcase {
+        /* The hack for Safari */
+        height: -webkit-fill-available;
+    }
+}
+
+.fullscreen-slider-showcase .slide-bgimg,
+.fullscreen-slider-showcase .swiper-wrapper {
+    -webkit-transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1) !important;
+    -o-transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1) !important;
+    transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1) !important;
+}
+
+.fs-project.swiper-slide .fs-project-image {
+    display: none
+}
+
+.fs-project {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 2;
+    pointer-events: none
+}
+
+.fs-project.active {
+    visibility: visible
+}
+
+.fs-project-dets {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    width: 40%;
+    left: 15%;
+}
+
+.fs-title {
+    font-size: 110px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    margin-bottom: 100px;
+    line-height: 115px;
+    width: 100%;
+    display: block;
+    overflow: hidden
+}
+
+.fullscreen-slider-showcase.dark .fs-title,
+body.dark .fullscreen-slider-showcase .fs-title {
+    color: #fff
+}
+
+.fs-meta {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.fs-meta span {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    color: rgba(25, 27, 29, .6);
+    line-height: 25px;
+}
+
+.fullscreen-slider-showcase.dark .fs-meta span,
+body.dark .fullscreen-slider-showcase .fs-meta span {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+
+span.fs-year::before {
+    content: "/";
+    margin: 0 5px;
+}
+
+.fs-nav {
+    display: block;
+}
+
+.fs-nav span {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    display: inline-block;
+    color: rgba(25, 27, 29, .6);
+    cursor: pointer
+}
+
+.fs-nav span.swiper-pagination-progressbar-fill {
+    background: #191b1d
+}
+
+.fullscreen-slider-showcase.dark .fs-nav span,
+body.dark .fullscreen-slider-showcase .fs-nav span {
+    color: hsla(0, 0%, 100%, .6)
+}
+
+
+span.fs-prog {
+    width: 100px;
+    height: 1px;
+    background: rgba(25, 27, 29, .3);
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.fullscreen-slider-showcase.dark span.fs-prog,
+body.dark .fullscreen-slider-showcase span.fs-prog {
+    background: hsla(0, 0%, 100%, .2)
+}
+
+.fullscreen-slider-showcase.dark .swiper-pagination-progressbar.fs-prog .swiper-pagination-progressbar-fill,
+body.dark .fullscreen-slider-showcase .swiper-pagination-progressbar.fs-prog .swiper-pagination-progressbar-fill {
+    background: #fff
+}
+
+span.fs-prog-bar {
+    background: #191b1d;
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.fullscreen-slider-showcase.dark span.fs-prog-bar,
+body.dark .fullscreen-slider-showcase span.fs-prog-bar {
+    background: #fff
+}
+
+.fullscreen-slider-showcase.dark .swiper-pagination-progressbar.fs-prog .swiper-pagination-progressbar-fill,
+body.dark .fullscreen-slider-showcase .swiper-pagination-progressbar.fs-prog .swiper-pagination-progressbar-fill {
+    color: #fff
+}
+
+.fs-button {
+    position: absolute;
+    right: 20%;
+    top: 32%;
+    display: block;
+    pointer-events: all
+}
+
+.fs-button a {
+    text-decoration: none;
+    color: #191b1d;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    position: relative;
+    display: block;
+}
+
+.fullscreen-slider-showcase.dark .fs-button a::after,
+body.dark .fs-button a::after,
+.fullscreen-slider-showcase.dark .fs-button a,
+body.dark .fs-button a {
+    color: #fff
+}
+
+.fs-button a::after {
+    content: "\ea5d";
+    font-family: IcoFont;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -1px;
+    display: inline-block;
+}
+
+.fs-button,
+.fs-meta,
+.fs-fraction {
+    overflow: hidden
+}
+
+
+.fs-tit-char {
+    overflow: hidden;
+    padding-right: 3px;
+    margin-right: -3px
+}
+
+.fs-tit-char > span,
+.fs-button > span,
+.fs-meta > span,
+.fs-fraction > span {
+    display: block
+}
+
+.fs-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0
+}
+
+.fs-images .fs-project-image .fs-im-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.fs-images .fs-project-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.fs-fraction {
+    display: block;
+    position: absolute;
+    left: 8.5%;
+    top: 29.5%;
+    overflow: hidden;
+    z-index: 2
+}
+
+.fs-fraction span {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    font-size: 15px;
+    color: rgba(25, 27, 29, .6);
+    display: block
+}
+
+.fullscreen-slider-showcase.dark .fs-fraction span,
+body.dark .fs-fraction span {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+span.fs-tot::before {
+    content: "/";
+    margin-right: 5px;
+}
+
+
+.fs-img-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+

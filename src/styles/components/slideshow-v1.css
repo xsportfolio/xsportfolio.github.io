@@ -1,0 +1,346 @@
+/*------------------------------------------------------------------
+## SlideShow V1
+-------------------------------------------------------------------**/
+.portfolio-showcase.showcase-slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+
+    .portfolio-showcase.showcase-slideshow {
+        /* The hack for Safari */
+        height: -webkit-fill-available;
+    }
+}
+
+.showcase-slideshow-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    -webkit-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    transform: translatey(-50%);
+    width: 35%;
+    height: 68%;
+}
+
+.ss-project {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    visibility: hidden;
+
+}
+
+.ss-project.active {
+    visibility: visible
+}
+
+
+.ss-project .ss1-image {
+    display: none
+}
+
+.ss1-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ss1-details {
+    position: relative;
+    top: 40%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    overflow: hidden
+}
+
+.ss1-met-wrap {
+    display: block;
+    float: right;
+    width: 60%;
+}
+
+.ss1-title {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    float: left;
+    width: 100%;
+    display: block;
+    line-height: 120px
+}
+
+
+.ss1-title .st-line {
+    display: block;
+
+}
+
+.ss1-summary {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.ss1-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ss1-cat {
+    display: block;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: rgba(25, 27, 29, .6);
+    margin-left: 100px;
+    margin-bottom: 30px;
+    float: left;
+    overflow: hidden;
+}
+
+.showcase-slideshow.dark .ss1-title,
+.showcase-slideshow.dark .ss1-dots.swiper-pagination-bullets span,
+.showcase-slideshow.dark .ss1-date,
+body.dark .ss1-title,
+body.dark .ss1-dots.swiper-pagination-bullets span,
+body.dark .ss1-date {
+    color: #fff
+}
+
+.showcase-slideshow.dark .ss1-cat,
+body.dark .ss1-cat,
+.showcase-slideshow.dark .ss1-summary,
+body.dark .ss1-summary {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+.ss1-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.ss1-images .ss1-image-wrap img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ss1-image-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.ss1-image-wrap.active {
+    width: 100%
+}
+
+
+.ss1-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ss1-sl-image {
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease
+}
+
+.ss1-sl-image {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    -webkit-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    transform: translatey(-50%);
+    width: 50%;
+    height: 62%;
+    overflow: hidden;
+}
+
+.ss1-sl-image .plyr__video-wrapper {
+    width: calc((75vh) * 1.77777778) !important
+}
+
+.ss1-sl-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ss1-images .swiper-wrapper {
+    -webkit-transition-timing-function: cubic-bezier(0.51, 0.51, 0, 1.01);
+    -o-transition-timing-function: cubic-bezier(0.51, 0.51, 0, 1.01);
+    transition-timing-function: cubic-bezier(0.51, 0.51, 0, 1.01);
+}
+
+.ss1-dots.swiper-pagination-bullets {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 3
+}
+
+.ss1-dots.swiper-pagination-bullets span {
+    width: auto;
+    height: auto;
+    background: none !important;
+    display: block;
+    margin-bottom: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    cursor: pointer;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.ss1-dots.swiper-pagination-bullets span:last-child {
+    margin-bottom: 0;
+}
+
+.ss1-fraction {
+    position: absolute;
+    right: 8%;
+    bottom: 5%;
+}
+
+.ss1-fraction div {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+}
+
+.ss1-curr::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+    background: rgba(25, 27, 29, .6);
+    margin: 10px auto;
+}
+
+.showcase-slideshow.dark .ss1-fraction div,
+body.dark .ss1-fraction div {
+    color: #fff
+}
+
+.showcase-slideshow.dark .ss1-curr::after,
+body.dark .ss1-curr::after {
+    background: hsla(0, 0%, 100%, .2)
+}
+
+.ss1-button {
+    display: block;
+    border-radius: 50px;
+    background: #ebebeb;
+    display: inline-block;
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.ss1-button a {
+    display: block;
+    text-decoration: none;
+    color: #191b1d;
+    padding: 20px 40px;
+}
+
+body.dark .ss1-button {
+    background: hsla(0, 0%, 100%, .2)
+}
+
+body.dark .ss1-button a {
+    color: #fff
+}
+
+.ss1-button a::after {
+    content: "\ea94";
+    font-family: IcoFont;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ss1-nav {
+    position: absolute;
+    bottom: 5%;
+    left: 8%;
+}
+
+.ss1-nav i {
+    font-size: 25px;
+}
+
+.ss1-prev::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #191b1d;
+    margin: 0 auto;
+    margin-top: -16px;
+}
+
+.ss1-next::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #191b1d;
+    margin: 0 auto;
+    margin-bottom: -16px;
+}
+
+.ss1-nav div {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.showcase-slideshow.dark .ss1-nav div,
+body.dark .ss1-nav div {
+    color: #fff
+}
+
+.showcase-slideshow.dark .ss1-prev::after,
+.showcase-slideshow.dark .ss1-next::before,
+body.dark .ss1-prev::after,
+body.dark .ss1-next::before {
+    background: #fff;
+    color: #fff
+}
+
+.tl-wrap,
+.ssum-line {
+    display: block;
+    overflow: hidden
+}
+

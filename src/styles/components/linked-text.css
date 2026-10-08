@@ -1,0 +1,87 @@
+/*--------------------------------------------------
+## Linked Text
+---------------------------------------------------*/
+
+.linked-text {
+    display: block;
+    float: left;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.linked-text.loaded {
+    pointer-events: all
+}
+
+.linked-text a {
+    text-decoration: none;
+    color: #191b1d;
+    position: relative;
+
+}
+
+.linked-text a > div {
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    padding-right: 4px;
+    margin-right: -4px;
+
+}
+
+.linked-text a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 12px;
+    background: #191b1d;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid #fff;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    z-index: 1;
+    -webkit-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease
+}
+
+.linked-text.loaded a:hover::before {
+    width: 0%
+}
+
+.linked-text.loaded a::before {
+    width: 100%;
+}
+
+.linked-line {
+    overflow: hidden;
+    padding-right: 5px;
+}
+
+.linked-text .link-target {
+    display: block;
+    color: rgba(25, 27, 29, .6)
+}
+
+body.dark .linked-text a::before,
+.linked-text.light a::before {
+    background: #fff;
+    border-top: 2px solid #191b1d
+}
+
+body.dark .link-target,
+.linked-text.light .link-target {
+    color: hsla(0, 0%, 100%, .2)
+}
+
+body.dark .linked-text a,
+.linked-text.light a {
+    color: #fff
+}
+

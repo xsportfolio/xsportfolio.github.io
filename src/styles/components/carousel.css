@@ -1,0 +1,188 @@
+/*------------------------------------------------------------------
+## Carousel
+-------------------------------------------------------------------**/
+
+.portfolio-showcase.carousel-showcase {
+    width: 100%;
+    height: 100vh
+}
+
+.cas-project-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+}
+
+.cas-project {
+    display: block;
+    margin-right: 300px;
+    width: 50vw;
+    position: relative;
+    height: 50vh;
+}
+
+.cas-project .cs-cat {
+    display: none
+}
+
+.cas-project:last-child {
+    margin-right: 0
+}
+
+.cas-headline {
+    position: absolute;
+    top: 50%;
+    left: 8.5%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    max-width: 80vw;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    line-height: 75px;
+    padding-left: 5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.cas-headline .cas-line {
+    overflow: hidden;
+    padding-right: 6px
+}
+
+.cas-headline .cas-line span {
+    display: block
+}
+
+.cs-image {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.cs-image img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+}
+
+
+.cas-progress.swiper-pagination-progressbar {
+    position: absolute;
+    bottom: 5%;
+    top: unset;
+    width: 60%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 1px;
+}
+
+.cas-progress.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #191b1d;
+}
+
+.cas-titles {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 250px;
+    overflow: hidden;
+}
+
+.cas-titles .cas-titles-wrap {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translateY(250px);
+    -ms-transform: translateY(250px);
+    transform: translateY(250px)
+}
+
+.cas-titles .cs-title {
+    font-size: 150px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    white-space: nowrap;
+    padding: 50px 0
+}
+
+.cas-titles .cs-title a {
+    text-decoration: none;
+    color: #191b1d;
+    display: block;
+    overflow: visible
+}
+
+.cas-progress {
+    display: block;
+    position: fixed;
+    bottom: 7.5%;
+    width: 50%;
+    height: 1px;
+    background: rgba(25, 27, 29, .2);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.cas-progress span {
+    position: absolute;
+    left: 0;
+    background: #191b1d;
+    height: 100%;
+    width: 0%;
+}
+
+.carousel-showcase.dark .cas-progress,
+body.dark .cas-progress {
+    background: hsla(0, 0%, 100%, .2)
+}
+
+.carousel-showcase.dark .cas-progressspan,
+body.dark .cas-progress span {
+    background: #fff
+}
+
+.cas-bg-text {
+    font-size: 200px;
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    white-space: nowrap;
+    opacity: .02;
+}
+
+.carousel-showcase.dark .cas-titles .cs-title a,
+body.dark .cas-titles .cs-title a,
+.carousel-showcase.dark .cas-headline,
+body.dark .cas-headline {
+    color: #fff
+}
+

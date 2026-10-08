@@ -1,0 +1,75 @@
+/*------------------------------------------------------------------
+## Classic
+-------------------------------------------------------------------**/
+.portfolio-showcase.showcase-classic {
+    width: 83%;
+    display: block;
+    margin: auto;
+    position: relative;
+    padding-top: 10%;
+    overflow: hidden;
+}
+
+.sc-projects-wrapper {
+    position: relative;
+    width: 75%;
+    float: right;
+    overflow: hidden;
+    height: 100%;
+    display: block;
+}
+
+.sc-project-image {
+    width: 45%;
+    height: 100%;
+}
+
+.sc-project-image img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.sc-project {
+    display: block;
+    margin-bottom: 100px;
+    float: left;
+    width: 100%;
+}
+
+.sc-project:nth-child(even) {
+    text-align: right;
+}
+
+.sc-project:nth-child(even) .sc-project-image {
+    float: right
+}
+
+.sc-project-title {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+
+}
+
+.sc-project-cat {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #8f8d8d;
+}
+
+.sc-project-meta {
+    margin-top: 15px;
+    padding-left: 15px;
+    display: block;
+    width: 100%;
+}
+
+.sc-project:nth-child(even) .sc-project-meta {
+    float: right;
+    padding-left: 0;
+    padding-right: 15px
+}
+

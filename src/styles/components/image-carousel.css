@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------
+##  Image Carousel
+-------------------------------------------------------------------**/
+
+.a-image-carousel {
+    position: relative;
+    display: block;
+    overflow: visible;
+    margin: 50px 0;
+}
+
+.ai-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 30px
+}
+
+.ai-image {
+    display: block;
+    margin-right: 30px;
+    -ms-flex-preferred-size: 40vw;
+    flex-basis: 40vw;
+    min-width: 40vw;
+    position: relative;
+}
+
+.ai-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+

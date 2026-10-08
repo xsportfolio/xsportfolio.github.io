@@ -1,0 +1,205 @@
+/*------------------------------------------------------------------
+##  Personal Head
+-------------------------------------------------------------------**/
+.a-personal-head {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.aph-image {
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    left: 45%;
+    -webkit-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    transform: translatex(-50%);
+    z-index: 5;
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom
+}
+
+.aph-image img {
+    width: 148%;
+}
+
+.aph-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 84%;
+    height: 200px
+}
+
+.aph-name {
+    font-size: 200px;
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 6;
+    pointer-events: none;
+    overflow: visible
+}
+
+.a-personal-header.dark .aph-name,
+body.dark .aph-name {
+    color: #fff
+}
+
+.aph-name.back {
+    z-index: 4
+}
+
+.aph-name .name-back {
+    opacity: 0;
+    visibility: hidden
+}
+
+.aph-name.back .name-front {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.aph-name.back .name-back {
+    opacity: 1;
+    visibility: visible
+}
+
+.aph-welc {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    color: rgba(25, 27, 29, .6);
+    overflow: hidden
+}
+
+.aph-sub-text {
+    position: absolute;
+    right: 0;
+    max-width: 30%;
+    -webkit-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    transform: translateY(200px);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.06em;
+    line-height: 30px;
+    color: rgba(25, 27, 29, .6);
+    bottom: 0;
+
+}
+
+.aph_sub_line {
+    overflow: hidden
+}
+
+.aph_sub_line span {
+    display: block
+}
+
+body.dark .aph-sub-text,
+.a-personal-header.dark .aph-sub-text,
+.a-personal-header.dark .aph-welc,
+body.dark .aph-welc {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+
+.circular-button {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    background: #191b1d;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.circular-button.dark,
+body.dark .circular-button {
+    color: #fff;
+    background: #101010
+}
+
+.circular-button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    opacity: 0
+}
+
+a.circular-button::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background: #ebebeb;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+    z-index: 1
+}
+
+a.circular-button.dark::after,
+body.dark a.circular-button::after {
+    background: #fff
+}
+
+a.circular-button:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+a.circular-button:hover {
+    color: #191b1d
+}
+
+a.circular-button.dark:hover,
+body.dark a.circular-button:hover {
+    color: #191b1d
+}
+
+.circular-button span i {
+    display: block;
+    margin-top: 10px
+}
+

@@ -1,0 +1,66 @@
+/*------------------------------------------------------------------
+# Widgets
+-------------------------------------------------------------------**/
+
+.widget {
+    margin-bottom: 40px;
+    display: block;
+    overflow: hidden
+}
+
+/*------------------------------------------------------------------
+## Search
+-------------------------------------------------------------------**/
+.widget input[type="search"i] {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: 1px solid #191b1d;
+    color: #191b1d;
+}
+
+.widget form.search-form {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.widget .search-form button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.widget .search-form button i {
+    color: #191b1d;
+}
+
+/*------------------------------------------------------------------
+## Product Tags
+-------------------------------------------------------------------**/
+
+ul.product-tags {
+    padding: 0;
+    list-style: none;
+}
+
+ul.product-tags li {
+    display: inline-block;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid #191b1d;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+ul.product-tags li a {
+    text-decoration: none;
+    color: #191b1d;
+    padding: 10px 10px;
+    display: block;
+}
+

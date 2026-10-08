@@ -1,0 +1,107 @@
+/*------------------------------------------------------------------
+## Product Categories
+-------------------------------------------------------------------**/
+
+.a-product-categories {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.apcats-cat {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+}
+
+.apcats-cat a {
+    text-decoration: none;
+    color: #191b1d
+}
+
+body.dark .apcats-cat a {
+    color: #fff
+}
+
+
+.apc-cat-title {
+    font-size: 75px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    display: inline-block;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    -o-transition: transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease
+}
+
+.apc-cat-quant {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    margin-left: 50px;
+}
+
+.apc-cat-quant::before {
+    content: "/";
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.apcats-cat::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(25, 27, 29, .2);
+}
+
+body.dark .apcats-cat::before {
+    background: hsla(0, 0%, 100%, .2)
+}
+
+.apcats-cat::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #191b1d;
+    -webkit-transition: width .4s ease;
+    -o-transition: width .4s ease;
+    transition: width .4s ease
+}
+
+body.dark .apcats-cat::after {
+    background: #fff
+}
+
+.apc-cat-mark {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(-25%, -50%);
+    -ms-transform: translate(-25%, -50%);
+    transform: translate(-25%, -50%);
+    font-size: 50px;
+}
+
+
+.apcats-cat:hover .apc-cat-title {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px)
+}
+
+.apcats-cat:hover::after {
+    width: 100%
+}
+

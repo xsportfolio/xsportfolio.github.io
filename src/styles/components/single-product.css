@@ -1,0 +1,88 @@
+/*------------------------------------------------------------------
+## Single Product
+-------------------------------------------------------------------**/
+
+.a-single-product {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.a-single-product a {
+    text-decoration: none;
+    color: #191b1d;
+}
+
+body.dark .a-single-product a {
+    color: #fff;
+}
+
+.asp-image,
+.asp-image img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+    display: block;
+    float: left;
+}
+
+.asp-det {
+    display: block;
+    float: left;
+    padding: 30px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.asp-product-title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.asp-product-price {
+    display: block;
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: rgba(25, 27, 29, .6)
+}
+
+body.dark .asp-product-price {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+.asp-add-to-cart {
+    display: block;
+    float: right;
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+.asp-add-to-cart i {
+    color: rgba(25, 27, 29, .6);
+}
+
+.asp-product-rate {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+}
+
+ul.asp-rate {
+    list-style: none;
+    padding: 0;
+}
+
+ul.asp-rate li {
+    display: inline-block;
+    font-size: 12px;
+}
+

@@ -1,0 +1,192 @@
+/*------------------------------------------------------------------
+## Wall
+-------------------------------------------------------------------**/
+
+.project-image {
+    display: none
+}
+
+.portfolio-showcase.showcase-wall {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.wall-projects {
+    position: absolute;
+    top: 57%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.wall-projects-top,
+.wall-projects-bottom {
+    white-space: nowrap;
+    display: inline-block;
+    width: auto;
+
+}
+
+.wall-projects-top {
+    margin-bottom: 30px;
+    -webkit-transform: translateX(10%);
+    -ms-transform: translateX(10%);
+    transform: translateX(10%)
+}
+
+.wall-projects-bottom {
+    float: right;
+    -webkit-transform: translateX(-10%);
+    -ms-transform: translateX(-10%);
+    transform: translateX(-10%)
+}
+
+.wall-project {
+    display: inline-block;
+}
+
+
+.wall-project a {
+    text-decoration: none;
+    color: #191b1d;
+    display: block;
+}
+
+.showcase-wall.dark .wall-project a,
+body.dark .wall-project a {
+    color: #fff
+}
+
+.wall-project .project-title {
+    font-size: 125px;
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    line-height: 125px;
+    overflow: visible
+}
+
+.wall-project .project-title::after {
+    content: "/";
+    opacity: .3;
+    margin: 0 30px;
+}
+
+.wall-project .project-title::before {
+    content: attr(data-index);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 20px;
+    width: 20px;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: rgba(25, 27, 29, .6);
+}
+
+.showcase-wall.dark .wall-project .project-title::before,
+body.dark .wall-project .project-title::before {
+    color: hsla(0, 0%, 100%, .2)
+}
+
+.wall-project:last-child .project-title::after {
+    display: none
+}
+
+#images-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wall-projects.on-hover .wall-project {
+    opacity: .2;
+}
+
+.wall-projects.on-hover .wall-project.hovered {
+    opacity: 1;
+}
+
+.wall-images {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 70%;
+    z-index: -2;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    display: block
+}
+
+.wall-image-fix {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    visibility: hidden;
+}
+
+
+.wall-images img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top
+}
+
+.showcase-wall .circular-button {
+    position: relative;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    display: block;
+    left: 0;
+    bottom: 0;
+}
+
+.wall-drag {
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 10%;
+    background: rgba(25, 27, 29, .3);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+body.dark .wall-drag,
+.showcase-wall.dark .wall-drag {
+    background: hsla(0, 0%, 100%, .2)
+}
+
+span.wall-prog {
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #191b1d;
+    z-index: 6;
+}
+
+body.dark span.wall-prog,
+.showcase-wall.dark span.wall-prog {
+    background: #fff
+}
+

@@ -1,0 +1,28 @@
+/*--------------------------------------------------
+## Big Button
+---------------------------------------------------*/
+
+.big-button a {
+    color: #191b1d;
+    text-decoration: none;
+    font-size: 43px;
+    font-weight: 700;
+    letter-spacing: -3.5px;
+    position: relative;
+}
+
+.big-button a::after {
+    content: "\ea5d";
+    font-family: IcoFont;
+    position: absolute;
+    font-size: 40px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: -15px;
+}
+
+#footer.dark .big-button a {
+    color: #fff
+}
+

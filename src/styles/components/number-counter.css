@@ -1,0 +1,117 @@
+/*------------------------------------------------------------------
+## Number Counter
+-------------------------------------------------------------------**/
+
+.a-number-counter {
+    position: relative;
+    display: block;
+}
+
+.ac-number {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -7.5px;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+    padding-right: 5px
+}
+
+.ac-number span {
+    display: block;
+}
+
+.numbers-wrapper {
+    -webkit-transform: translateY(28%);
+    -ms-transform: translateY(28%);
+    transform: translateY(28%)
+}
+
+.ac-number span:last-child::after {
+    content: attr(data-sign);
+    display: inline-block;
+    margin-left: 5px;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+}
+
+.count_anim_end .ac-number span:last-child::after {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+span.ac-sign {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -7.5px;
+    display: inline-block;
+    padding-bottom: 20px;
+    vertical-align: top;
+    overflow: hidden
+}
+
+.a-number-counter.dark span.ac-sign {
+    color: #fff
+}
+
+.ac-title {
+    display: block;
+    font-size: 16px;
+    margin-top: -1px;
+    overflow: hidden;
+    color: rgba(25, 27, 29, .6)
+}
+
+.ac-title span {
+    display: block;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform .5s ease 1s;
+    transition: -webkit-transform .5s ease 1s;
+    -o-transition: transform .5s ease 1s;
+    transition: transform .5s ease 1s;
+    transition: transform .5s ease 1s, -webkit-transform .5s ease 1s;
+}
+
+.a-number-counter.count_inview .ac-title span {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%)
+}
+
+.ac-title::before {
+    content: "";
+    display: block;
+    background: hsla(0, 0%, 100%, .2);
+    width: 0%;
+    height: 1px;
+    margin-bottom: 30px;
+    -webkit-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease
+}
+
+.a-number-counter.count_inview .ac-title::before {
+    width: 80%
+}
+
+.a-number-counter.dark .ac-number,
+body.dark .ac-number {
+    color: #fff;
+}
+
+.a-number-counter.dark .ac-title,
+body.dark .ac-title {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+
+

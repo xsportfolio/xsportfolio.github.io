@@ -1,0 +1,396 @@
+/*------------------------------------------------------------------
+## SlideShow V2
+-------------------------------------------------------------------**/
+
+.ss2-project {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-showcase.showcase-slideshow-v2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.portfolio-showcase.showcase-slideshow-v2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #191b1d;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.showcase-slideshow-2-wrapper {
+    display: block;
+    position: relative;
+    max-width: 35%;
+    height: 70%;
+    top: 50%;
+    left: 16%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.ss2-project-meta {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.ss2-project-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute
+}
+
+.ss2-project-image img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+}
+
+.ss2-project .ss2-project-image {
+    display: none
+}
+
+.ss2-images {
+    position: absolute;
+    right: 8.5%;
+    top: 50%;
+    width: 35%;
+    height: 70%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slide-bgimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.ss2-project-title {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    display: block;
+    margin-bottom: 30px;
+    line-height: 120px;
+}
+
+body.dark .ss2-button a,
+.showcase-slideshow-v2.dark .ss2-button a,
+.showcase-slideshow-v2.dark .ss2-dots span.ss2-dot,
+body.dark .ss2-dots span.ss2-dot,
+body.dark .ss2-project-cat,
+.showcase-slideshow-v2.dark .ss2-project-cat,
+body.dark .ss2-project-title,
+.showcase-slideshow-v2.dark {
+    color: #fff
+}
+
+body.dark .ss2-overlay,
+.showcase-slideshow-v2.dark .ss2-overlay {
+    color: #131313
+}
+
+.ss2-project-cat {
+    display: inline-block;
+    margin-bottom: 25px;
+    overflow: hidden;
+    line-height: 35px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    color: rgba(25, 27, 29, .6)
+}
+
+body.dark .ss2-project-excerpt,
+.showcase-slideshow-v2.dark .ss2-project-excerpt,
+body.dark .ss2-project-cat,
+.showcase-slideshow-v2.dark .ss2-project-cat {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+body.dark .ss2-back-texts,
+.showcase-slideshow-v2.dark .ss2-back-texts {
+    color: hsla(0, 0%, 100%, .01)
+}
+
+.ss2-project-cat span {
+    display: block;
+}
+
+.ss2-project-excerpt {
+    width: 60%;
+    font-size: 14px;
+    line-height: 28px;
+    margin-left: 7px;
+    color: rgba(25, 27, 29, .4);
+}
+
+.ss2-project-excerpt > div {
+    display: block;
+    overflow: hidden
+}
+
+.ss2-project-excerpt > div > span {
+    display: block
+}
+
+
+.ss2-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: #ebebeb;
+    z-index: -2;
+}
+
+body.dark .ss2-button,
+.showcase-slideshow-v2.dark .ss2-button,
+body.dark .ss2-overlay,
+.showcase-slideshow-v2.dark .ss2-back-texts {
+    background: #131313
+}
+
+.fullscreen-footer.ss2-footer {
+    position: absolute;
+    bottom: 8%;
+    left: 7.5%;
+    display: block;
+    right: 7.5%;
+}
+
+.ss2-footer-left {
+    position: absolute;
+    left: 0;
+    bottom: 30px
+}
+
+.ss2-footer-right {
+    position: absolute;
+    right: 0;
+}
+
+.ss2-dots {
+    position: absolute;
+    left: 8.5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.ss2-dots span.ss2-dot {
+    display: block;
+    cursor: pointer;
+    margin-left: 25px;
+    opacity: .3;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    padding: 15px 0;
+    background: none;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-bottom: 20px;
+}
+
+.ss2-dot::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    background: #191b1d;
+    vertical-align: middle;
+    margin-top: -25px;
+    margin-left: 20px;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.ss2-dots span.ss2-dot:hover {
+    opacity: .6
+}
+
+.ss2-dots span.ss2-dot.swiper-pagination-bullet-active {
+    opacity: 1;
+    margin-left: 0;
+}
+
+.ss2-dot.swiper-pagination-bullet-active::after {
+    width: 20px;
+}
+
+.ss2-project .title-line {
+    overflow: hidden
+}
+
+.ss2-project {
+    visibility: hidden
+}
+
+.ss2-project.active {
+    visibility: visible
+}
+
+.ss2-nav {
+    position: absolute;
+    bottom: 8%;
+    right: 25%;
+    -webkit-transform: translateX(-30%);
+    -ms-transform: translateX(-30%);
+    transform: translateX(-30%);
+}
+
+.ss2-nav div {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.ss2-nav i {
+    font-size: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ss2-prev::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 1px;
+    background: #191b1d;
+    vertical-align: middle;
+    margin-left: -15px;
+}
+
+.ss2-nav div.ss2-prev {
+    margin-right: 15px;
+}
+
+.ss2-next::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 1px;
+    background: #191b1d;
+    vertical-align: middle;
+    margin-right: -15px;
+}
+
+.ss2-nav div.ss2-next {
+    margin-left: 15px;
+}
+
+.ss2-fract div {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.ss2-fract .ss2-curr::after {
+    content: '/';
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.ss2-back-texts {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 220px;
+    font-weight: 700;
+    white-space: nowrap;
+    color: rgba(25, 27, 29, .02);
+    width: 100%;
+    height: auto;
+}
+
+.ss2-back-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.ss2-back-text.active {
+    visibility: visible
+}
+
+.ss2-back-text .bt-char {
+    overflow: hidden
+}
+
+.ss2-back-text .bt-char span {
+    display: block
+}
+
+.ss2-button {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #ebebeb;
+    border-radius: 50%;
+    bottom: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-80%);
+    -ms-transform: translateX(-80%);
+    transform: translateX(-80%);
+    z-index: 2;
+}
+
+.ss2-button a {
+    text-decoration: none;
+    color: #191b1d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: auto;
+    white-space: nowrap;
+    display: block;
+}
+
+.ss2-button a::after {
+    content: "\eac7";
+    display: block;
+    text-align: center;
+    font-family: IcoFont;
+    margin-top: 10px;
+    font-size: 20px;
+}
+

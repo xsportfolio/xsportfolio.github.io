@@ -1,0 +1,83 @@
+/*------------------------------------------------------------------
+## Team Member
+-------------------------------------------------------------------**/
+
+.a-team-member {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.member-image,
+.member-image img {
+    display: block;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.member-meta {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+
+.member-name {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.04em;
+    line-height: 39px;
+}
+
+.member-title {
+    color: hsla(0, 0%, 100%, .4);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.member-socials li {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 30px;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+}
+
+.member-socials li a {
+    text-decoration: none;
+    display: block;
+    color: hsla(0, 0%, 100%, .4);
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: all .6s cubic-bezier(0.22, 1, 0.36, 1);
+    -o-transition: all .6s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: all .6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.member-socials li a:hover {
+    color: hsla(0, 0%, 100%, 1);
+}
+
+.member-socials {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.a-team-member:hover .member-socials a {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.member-socials ul {
+    padding: 0;
+    list-style: none;
+}
+
+

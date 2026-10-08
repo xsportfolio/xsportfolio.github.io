@@ -1,0 +1,82 @@
+/*------------------------------------------------------------------
+# Site Footer
+-------------------------------------------------------------------**/
+
+
+/* Eleman | http://localhost/a/# */
+
+#footer {
+    display: block;
+    clear: both;
+    background: #ebebeb;
+    margin-bottom: 0;
+    padding: 100px 0 15px 0;
+    z-index: 999;
+
+}
+
+#footer.dark {
+    background: #131313
+}
+
+.copyright-text {
+    font-size: 12px;
+    color: rgba(25, 27, 29, .6);
+}
+
+#footer.dark .copyright-text {
+    color: hsla(0, 0%, 100%, .2);
+}
+
+.social-list-widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.social-list-widget ul li a {
+    color: #191b1d;
+    text-decoration: none;
+}
+
+#footer.dark .social-list-widget ul li a {
+    color: #fff
+}
+
+.social-list-widget li {
+    font-size: 14px;
+    padding-bottom: 16px;
+}
+
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    margin: 0;
+    padding: 0
+}
+
+.footer-menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.footer-menu ul li a {
+    color: rgba(25, 27, 29, .6);
+    text-decoration: none;
+}
+
+#footer.dark .footer-menu ul li a {
+    color: hsla(0, 0%, 100%, .4)
+}
+
+.footer-menu ul li {
+    padding-right: 30px;
+    font-size: 14px;
+}
+
+
+
+

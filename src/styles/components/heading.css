@@ -1,0 +1,63 @@
+/*------------------------------------------------------------------
+## Heading
+-------------------------------------------------------------------**/
+
+.a-heading {
+    position: relative;
+    display: block;
+}
+
+.heading-bg-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translatex(-30%) translateY(50%);
+    -ms-transform: translatex(-30%) translateY(50%);
+    transform: translatex(-30%) translateY(50%);
+    z-index: -1;
+    font-size: 250px;
+    white-space: nowrap;
+    display: block;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    color: hsl(0deg 0% 0% / 3%);
+    z-index: 0;
+}
+
+.a-heading.dark .heading-bg-text,
+body.dark .heading-bg-text {
+    color: hsla(0, 0%, 100%, .02)
+}
+
+.a-heading .ah-title {
+    z-index: 1
+}
+
+.a-heading.no-image .ah-image {
+    display: none
+}
+
+.a-heading.will_anim.with_image .ah-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.a-heading.will_anim.with_image .ah-image {
+    display: block;
+    max-width: 60%;
+    margin: 0 auto
+}
+
+.a-heading.will_anim.with_image .ah-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+

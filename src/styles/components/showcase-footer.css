@@ -1,0 +1,31 @@
+/*------------------------------------------------------------------
+## Showcase Footer
+-------------------------------------------------------------------**/
+
+.showcase-footer {
+    position: absolute;
+    bottom: 7.5%;
+    width: 83%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none
+}
+
+.showcase-footer-left,
+.showcase-footer-right {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    pointer-events: all
+}
+
+.showcase-footer-right {
+    text-align: right;
+    float: right;
+    pointer-events: all
+}
+
+

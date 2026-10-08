@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+## Text Wrapper
+-------------------------------------------------------------------**/
+
+.text-wrapper {
+    display: block;
+    float: left;
+    width: 100%
+}
+
+.text-wrapper .sub-title {
+    font-size: 17px;
+    letter-spacing: -0.3px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+

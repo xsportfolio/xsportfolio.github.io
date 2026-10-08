@@ -1,0 +1,11 @@
+/*--------------------------------------------------
+## Scrollable Text
+---------------------------------------------------*/
+
+.scrollable-text {
+    white-space: nowrap;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
